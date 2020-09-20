@@ -29,6 +29,16 @@ class App extends Component {
     });
   }
 
+  updateLikes = (imageId) => {
+    axios.put(`/gallery/like/${imageId}`)
+      .then(response => {
+        console.log("this is the response from server", response);
+        this.getImages();
+      }).catch(err => {
+        console.error('delete song failed', err)
+      });
+  }
+
   render() {
     return (
       <div className="App">
@@ -36,7 +46,7 @@ class App extends Component {
           <h1 className="App-title">Gallery of my life</h1>
         </header>
         <br />
-        <GalleryList galleryItems={this.state.galleryItems} />
+        <GalleryList updateLikes={this.updateLikes} galleryItems={this.state.galleryItems} />
       </div>
     );
   }
