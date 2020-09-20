@@ -28,7 +28,12 @@
   flex-wrap: wrap;
 }
 
-.galleryItem{
- padding: 30px;
+
+.imageText, .galleryItem img{
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  margin: auto;
   
+
 }
