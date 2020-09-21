@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Button } from '@material-ui/core';
+import { Card } from '@material-ui/core';
+
 
 class GalleryItem extends Component {
 
@@ -15,7 +18,7 @@ class GalleryItem extends Component {
 
     render() {
         return (
-            <div className="galleryItem" key={this.props.item.id}>
+            <Card className="galleryItem" key={this.props.item.id}>
                 <div onClick={this.clickText}>
                     {
                         this.state.isClicked ?
@@ -29,8 +32,8 @@ class GalleryItem extends Component {
                         `${this.props.item.likes} people like this image` :
                         'nobody likes this image :•('
                 }</p>
-                <button onClick={() => this.props.updateLikes(this.props.item.id)}>like</button>
-            </div>
+                <Button onClick={() => this.props.updateLikes(this.props.item.id)}>like</Button>
+            </Card>
         )
     }
 }
