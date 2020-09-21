@@ -1,9 +1,16 @@
-# Project Name
+# React Gallery
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+This app provides a simple interface for rating and viewing images that are found on my desktop.
 
-## Description
+## How To Run It
+After forking the code, the user must run `npm install` to install all dependencies. They may also have to run `npm install pg` and `npm install @material-ui/core`. 
 
-Your project description goes here. What problem did you solve? How did you solve it?
+A database, called `react_gallery`, must be created. All the SQL code to do so may be copied and pasted from the `database.sql` file.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+Then, to run the application, use two terminal windows to start the server and client side with `npm run server` and `npm run client` respectively.
+
+## How It Works
+
+All images initially load with no likes. When a user clicks the image, the text description is displayed. When the like button is clicked, the like counter increments upwards. 
+
+I hope you like this collection of random images!
