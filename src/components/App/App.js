@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import GalleryList from '../GalleryList/GalleryList'
+import GalleryList from '../GalleryList/GalleryList';
+import 'fontsource-roboto';
 
 
 class App extends Component {
