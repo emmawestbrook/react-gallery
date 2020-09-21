@@ -4,7 +4,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color:tomato;
   height: 70px;
   padding: 20px;
   color: white;
@@ -24,6 +24,8 @@
 }
 
 .gallery{
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
