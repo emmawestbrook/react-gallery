@@ -3,6 +3,9 @@ import './App.css';
 import axios from 'axios';
 import GalleryList from '../GalleryList/GalleryList';
 import 'fontsource-roboto';
+import { Route, HashRouter as Router, Link } from 'react-router-dom';
+import { Button } from '@material-ui/core';
+
 
 
 class App extends Component {
@@ -46,15 +49,45 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <Router>
         <header className="App-header">
           <h1 className="App-title">Random Images from My Computer Desktop</h1>
+          <Link className="nav-link" to="/">Gallery</Link>
+          <Link className="nav-link" to="/about">About</Link>
         </header>
-        <br />
-        {/* container item for all the gallery components which passes the update likes function
-        and the entire array of objects to be iterated through */}
-        <GalleryList updateLikes={this.updateLikes} galleryItems={this.state.galleryItems} />
-      </div>
+        {/* <nav>
+          <main>
+            <ul>
+              <li><Link to="/">Gallery</Link></li>
+              <li><Link to="/about">About</Link></li>
+            </ul>
+          </main>
+        </nav> */}
+
+
+
+
+        <main>
+          <Route path="/" exact>
+            <div className="App">
+              <br />
+              {/* container item for all the gallery components which passes the update likes function
+             and the entire array of objects to be iterated through */}
+              <GalleryList updateLikes={this.updateLikes} galleryItems={this.state.galleryItems} />
+            </div>
+          </Route>
+          <Route path="/about">
+            <div className="about">
+              <h1>about</h1>
+              <p>here is a collection of images that are on my computer desktop</p>
+            </div>
+          </Route>
+
+        </main>
+
+
+
+      </Router>
     );
   }
 }

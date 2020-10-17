@@ -37,6 +37,19 @@
   height: 200px;
   padding: 20px;
   margin: auto;
-  
+}
 
+.about{
+  width: 80%;
+  margin: 40px;
+}
+
+.nav-link {
+  float: right;
+  color: #f2f2f2;
+  background-color: tomato;
+  text-align: center;
+  padding-right: 20px;
+  text-decoration: none;
+  font-size: 15px;
 }
