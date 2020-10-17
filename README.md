@@ -2,7 +2,7 @@
 
 This app provides a simple interface for rating and viewing images that are found on my desktop.
 
-[screenshot](./screenshot.jpg)
+![screenshot](./screenshot.jpg)
 
 ## How To Run It
 After forking the code, the user must run `npm install` to install all dependencies. They may also have to run `npm install pg` and `npm install @material-ui/core`. 
